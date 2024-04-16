@@ -1,1 +1,17 @@
-<p>product works!</p>
+<h3 *ngIf="products; else noProduct"> {{title}} </h3>
+<ng-template #noProduct><h3>Ürün yok !!!</h3></ng-template>
+<div class="row"  >
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem;" *ngFor="let item of products">
+    <img class="card-img-top" src='{{item.imageUrl}}' alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title"> {{item.name}} </h5>
+      <p class="card-text">
+        {{item.description}}
+      </p>
+      <p>
+        {{item.price}}
+      </p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
