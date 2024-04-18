@@ -3,20 +3,16 @@ import { Component } from "@angular/core";
 import { NonNullableFormBuilder } from "@angular/forms";
 
 @Component({
-    selector: 'app-productEntity',
+    selector: 'app-categoryEntity',
     standalone: true,
-    imports: [CommonModule ],
+    imports: [CommonModule],
     template: '',
     styles: [],
   })
 
-export class ProductEntity{
+export class CategoryEntity{
     
     id:number;
     name:string;
-    price:number;
-    category:number;
-    description:string;
-    imageUrl:string;
     
 }

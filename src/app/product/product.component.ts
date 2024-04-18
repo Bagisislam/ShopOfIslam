@@ -1,3 +1,4 @@
+
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductEntity } from './ProductEntity';
@@ -5,7 +6,7 @@ import { ProductEntity } from './ProductEntity';
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, ProductEntity ],
+  imports: [CommonModule, ProductEntity],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css',
 })
