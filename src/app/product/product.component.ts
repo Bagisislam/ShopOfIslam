@@ -1,18 +1,36 @@
+import { filter } from 'rxjs';
+import { NavComponent } from './../nav/nav.component';
 
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { ProductEntity } from './ProductEntity';
+import { ProductFilterPipe } from "./product-filter.pipe";
+import { FilterTextService } from '../services/filter-text.service';
+
 
 @Component({
-  selector: 'app-product',
-  standalone: true,
-  imports: [CommonModule, ProductEntity],
-  templateUrl: './product.component.html',
-  styleUrl: './product.component.css',
+    selector: 'app-product',
+    standalone: true,
+    templateUrl: './product.component.html',
+    styleUrl: './product.component.css',
+    imports: [CommonModule, ProductEntity, ProductFilterPipe]
 })
-export class ProductComponent {
+export class ProductComponent implements OnInit{
+
+
+  constructor(private fitertextservice:FilterTextService) {
+  }
+  
+  filtertext:string= "";
+
+  ngOnInit(): void {
+    this.fitertextservice.currentText.subscribe(m=>this.filtertext = m);
+  }
+
+  
 
   title:string = "Ürün Listesi"
+
 
   products: ProductEntity[] = [
     {

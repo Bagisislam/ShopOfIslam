@@ -5,6 +5,9 @@ import { NavComponent } from "./nav/nav.component";
 import { CategoryComponent } from "./category/category.component";
 import { CommonModule } from '@angular/common';
 
+
+
+
 @Component({
     selector: 'app-root',
     standalone: true,
@@ -19,4 +22,6 @@ export class AppComponent {
    */
  
   title = 'ShopOfIslam';
+
+ 
 }

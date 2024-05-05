@@ -5,7 +5,7 @@ import { NonNullableFormBuilder } from "@angular/forms";
 @Component({
     selector: 'app-productEntity',
     standalone: true,
-    imports: [CommonModule ],
+    imports: [CommonModule],
     template: '',
     styles: [],
   })
